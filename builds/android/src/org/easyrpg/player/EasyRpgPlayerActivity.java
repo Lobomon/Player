@@ -56,18 +56,12 @@ public class EasyRpgPlayerActivity extends SDLActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		
-	    try {
-
+		super.onCreate(savedInstanceState);	
+		try {
  			if (Build.VERSION.SDK_INT >= 11) {
-
  				// Api 11: FLAG_HARDWARE_ACCELERATED
-
  				getWindow().setFlags(0x01000000, 0x01000000);
-
  			}
-
  		} catch (Exception e) {}
 		mLayout = (RelativeLayout)findViewById(R.id.main_layout);
 	    mLayout.addView(mSurface);
